@@ -1,12 +1,18 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar h2 {
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0;
+  color: $gray-dark;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar i {
+  color: $warning;
+  font-size: 20px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar a {
+  font-family: neue-haas-unica, sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }

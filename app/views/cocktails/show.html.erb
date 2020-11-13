@@ -1,10 +1,18 @@
-<div class="container">
-  <h2><%= @cocktail.name %></h2>
-    <% @cocktail.doses.each do |dose| %>
-      <ul class="list-unstyled">
-      <%= dose.description %>
-      <%= dose.ingredient.name %>
-      </ul>
-    <% end %>
+
+<div class="banner" style="background-image: url('https://source.unsplash.com/random')">
+  <div class="container text-center">
+    <h1 class="headers"><%= @cocktail.name %></h1>
+  </div>
+</div>
+<div class="container p-5 text-center">
+  <ul class="list-unstyled">
+  <% @cocktail.doses.each do |dose| %>
+    <li>
+      <span><%= dose.description %></span>
+      <span><%= dose.ingredient.name %></span>
+      <span><%= link_to '<i class="fas fa-trash"></i>'.html_safe, dose_path(dose), method: :delete %></span>
+    </li>
+  <% end %>
+  </ul>
   <%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail) %>
 </div>
