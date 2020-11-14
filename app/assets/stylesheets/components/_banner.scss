@@ -1,26 +1,25 @@
 .banner {
+  background-image: url("banner_horizontal.jpg");
   background-size: cover;
   background-position: center;
-  padding: 150px 20px;
-}
-
-.banner h1 {
+  padding: 300px 24px;
   font-family: neue-haas-unica, sans-serif;
+
+  h2 {
   font-weight: 600;
   font-style: normal;
   margin: 0;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
-}
+  }
 
-.banner p {
-  font-family: neue-haas-unica, sans-serif;
+  p {
+  margin-top: 8px;
   font-weight: 300;
   font-style: normal;
-  font-size: 20px;
   color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  width: 400px;
+  letter-spacing: .7px;
+  }
 }

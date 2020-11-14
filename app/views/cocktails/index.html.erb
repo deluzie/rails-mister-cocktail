@@ -1,9 +1,9 @@
-<div class="container text-center dark p-8">
-  <h2>Drink what you want to drink.</h2>
-  <p>discover our community's newest recipes</p>
+<div class="banner">
+  <h2>fancy a drink?</h2>
+  <p>meet our growing community of alcohol afficionados and discover the finest cocktails.</p>
 </div>
 
-<div class="container d-flex justify-content-center">
+<div class="container">
   <div>
     <% @cocktails.each do |cocktail| %>
     <div class="card d-inline-flex p-2 m-5" style="width: 20%;"><% link_to cocktail.name, cocktail_path(cocktail) %>

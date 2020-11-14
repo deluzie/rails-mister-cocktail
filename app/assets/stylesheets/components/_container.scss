@@ -1,12 +1,15 @@
-.container.text-center.dark {
-  margin-top: 120px;
-  margin-bottom: 100px;
-
-  h2 {
-    font-weight: 600px;
-  }
-
-  p {
-      font-weight: 300px;
-  }
+.container {
+  display: flex;
+  width: 500px;
+  margin: auto;
+  padding-top: 200px;
 }
+
+#wrapper {
+  padding-top: 36px;
+}
+
+body {
+    margin: 0;
+    background-color: #ffa9f21c;
+  }
