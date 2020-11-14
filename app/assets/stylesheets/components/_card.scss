@@ -1,5 +1,26 @@
-.card-body p {
-  font-family: neue-haas-unica, sans-serif;
-  font-weight: 300;
-  font-style: normal;
+.card {
+  display: flex;
+  justify-content: space-evenly;
+  height: 200px;
+  width: 400px;
+  border-radius: 3px;
+  box-shadow: 1px 2px 8px 2px #cca6a68f;
+  opacity: 0.8;
+
+  a {
+    margin: auto;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #ffa9f2;
+    transition: 0.5s;
+  }
+
+  .stretched-link {
+    display: block;
+  }
 }
+

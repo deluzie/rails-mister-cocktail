@@ -52,4 +52,23 @@
       padding: 8px 20px;
     }
 
+    select {
+      border-radius: 3px;
+      padding: 8px 20px;
+      background-color: #ffa9f2;
+      opacity: 0.5;
+      color: white;
+      font-size: 16px;
+      border: none;
+      width: 300px;
+    }
+
+    select:focus {
+      outline: none;
+    }
+
+    .form-group.select.required.dose_ingredient {
+      display: flex;
+      justify-content: space-between;
+    }
 }

@@ -1,17 +1,18 @@
-<div class="banner" style="background-image: @cocktail.photo">
-  <div class="container text-center">
-    <h1 class="headers"><%= @cocktail.name %></h1>
-  </div>
+<div class="banner" id="cocktail" style="background-image: url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
 </div>
-<div class="container p-5 text-center">
+<div class="container">
+  <h2 id="cocktail-title"><%= @cocktail.name %></h2>
   <ul class="list-unstyled">
   <% @cocktail.doses.each do |dose| %>
     <li>
+      <span class="trash"><%= link_to '<i class="fas fa-trash"></i>'.html_safe, dose_path(dose), method: :delete %></span>
       <span><%= dose.description %></span>
       <span><%= dose.ingredient.name %></span>
-      <span><%= link_to '<i class="fas fa-trash"></i>'.html_safe, dose_path(dose), method: :delete %></span>
     </li>
   <% end %>
+    <li>
+      <br>
+      <%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail) %>
+    </li>
   </ul>
-  <%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail) %>
 </div>
