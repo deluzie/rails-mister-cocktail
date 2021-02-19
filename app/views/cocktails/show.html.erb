@@ -16,3 +16,30 @@
     </li>
   </ul>
 </div>
+
+<div class="container">
+  <h2 id="cocktail-title">Reviews</h2>
+  <% if @cocktail.reviews.empty? %>
+    <p class="pink empty-spacer">Be the first to leave a review!</p>
+  <% else %>
+    <ul class="list-unstyled space-left">
+      <% @cocktail.reviews.each do |review| %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="badge badge-primary badge-pill">
+            <% counter = 0 %>
+            <% 5.times do %>
+              <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+              <% counter += 1 %>
+            <% end %>
+          </span>
+          <%= review.content %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
+<div class="container">
+  <%= render "reviews/new", cocktail: @cocktail, review: @review %>
+</div>
+
